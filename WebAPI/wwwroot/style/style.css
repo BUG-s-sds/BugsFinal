@@ -129,6 +129,7 @@ body {
           flex-direction: row;
   border: #DAE1F5 1px solid;
   border-radius: 5px;
+  width: 700px;
   height: 90%;
   padding: 10px 8px;
 }
@@ -274,10 +275,6 @@ body {
 .container .right .topmenu a {
   margin-left: 10px;
   cursor: pointer;
-}
-
-.container .right .topmenu #upload {
-  margin-left: auto !important;
 }
 
 .container .right .topmenu .logout {

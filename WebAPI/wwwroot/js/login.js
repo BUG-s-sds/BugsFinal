@@ -25,16 +25,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
         
-         /*$.post( ServerIp+"/api/auth/login", _data)
-          .done(function( data ) {
-            if(data.token!="" && data.expiration!="")
-            {
-                sessionStorage.setItem("login", "true");
-                sessionStorage.setItem("token", data.token);
-                sessionStorage.setItem("mail", _data.email);
-                window.location.href="index.html";
-            }
-          });*/
+
     }
     
 

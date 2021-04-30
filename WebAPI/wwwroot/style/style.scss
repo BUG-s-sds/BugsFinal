@@ -95,7 +95,7 @@ body{
     flex-direction: row;
     border: #DAE1F5 1px solid;
     border-radius: 5px;
-    
+    width: 700px;
     height: 90%;
     padding: 10px 8px;
     .left{
@@ -194,9 +194,7 @@ body{
                 margin-left: 10px ;
                 cursor: pointer;
             }
-            #upload{
-                margin-left: auto !important;
-            }
+            
             .logout{
                 display: flex;
                 width: 20px;

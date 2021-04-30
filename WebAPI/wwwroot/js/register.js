@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function(){
               
               
         }
+        else{
+            alert("şifreler uyuşmuyor.");
+        }
         
     }
 });
