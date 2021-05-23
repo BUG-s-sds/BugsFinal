@@ -32,6 +32,8 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+
+
         [HttpPost("update")]
         public IActionResult Update([FromForm(Name = "Image")] IFormFile file, [FromForm(Name = ("Id"))] int Id)
         {

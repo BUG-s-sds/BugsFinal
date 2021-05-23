@@ -12,5 +12,6 @@ namespace Entities.Concrete
         public string ImagePath { get; set; }
         public string ProfileImage { get; set; }
         public DateTime UserImageDate { get; set; }
+        public string ConvertType { get; set; }
     }
 }

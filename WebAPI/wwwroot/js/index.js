@@ -18,6 +18,7 @@ if (sessionStorage.getItem("login") == "true") {
 }
 
 function submitForm() {
+  document.getElementById("loading").style.display="flex";
   var fd = new FormData();
   var files = $("#upload")[0].files;
 
@@ -37,11 +38,13 @@ function submitForm() {
           window.location.reload();
         } else {
           alert("dosya yüklenemedi.");
+          document.getElementById("loading").style.display="none";
         }
       },
     });
   } else {
     alert("Lütfen bir dosya seçin.");
+    document.getElementById("loading").style.display="none";
   }
 }
 let profileImages = [];
@@ -100,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
           '" alt=""></div></div>';
       }
     }
+    document.getElementById("loading").style.display="none";
   });
 
   document.getElementById("search").onclick = () => {

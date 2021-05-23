@@ -10,7 +10,7 @@ namespace Business.Abstract
 {
     public interface IUserImageService
     {
-        IResult Add(IFormFile file, UserImage userImage);
+        IDataResult<string> Add(IFormFile file,UserImage userImage);
         IResult Delete(UserImage userImage);
         IResult Update(IFormFile file, UserImage userImage);
         IDataResult<List<UserImage>> GetAll(Expression<Func<UserImage, bool>> filter = null);

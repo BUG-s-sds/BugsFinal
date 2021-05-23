@@ -11,7 +11,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost; Database=BUGsDB; Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"Server=DESKTOP-LSDB34O\SQLSERVEREXPRESS; Database=Bugs; Trusted_Connection=true");
         }
         public DbSet<OperationClaim> OperationClaims { get; set; }
         public DbSet<User> Users { get; set; }
