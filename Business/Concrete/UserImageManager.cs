@@ -151,8 +151,15 @@ namespace Business.Concrete
             _userImageDal.Delete(userImage);
             return new SuccessResult(Message.PostDeleted);
         }
+        public IDataResult<UserImage> Get(int id)
+        {
+            return new SuccessDataResult<UserImage>(_userImageDal.Get(p => p.UserImageId == id));
+        }
+
+
 
         [CacheRemoveAspect("IUserImageService.Get")]
+       
         public IResult Update(IFormFile file, UserImage userImage)
         {
             var oldpath = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "..\\..\\..\\wwwroot")) + _userImageDal.Get(p => p.UserId == userImage.UserId).ImagePath;

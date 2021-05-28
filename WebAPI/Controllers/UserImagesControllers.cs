@@ -50,7 +50,8 @@ namespace WebAPI.Controllers
         [HttpPost("delete")]
         public IActionResult Delete([FromForm(Name = "Id")] int Id)
         {
-            var forDelete = _userImageService.GetById(Id).Data;
+            // var forDelete = _userImageService.GetById(Id).Data;
+            var forDelete = _userImageService.Get(Id).Data;
             var result = _userImageService.Delete(forDelete);
             if (result.Success)
             {
@@ -58,6 +59,7 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
         [HttpPost("profileimageadd")]
         public IActionResult ProfileImageAdd([FromForm(Name = "Image")] IFormFile file, [FromForm] UserImage userImage)
         {
